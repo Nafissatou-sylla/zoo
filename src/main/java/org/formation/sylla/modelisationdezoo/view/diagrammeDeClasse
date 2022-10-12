@@ -1,0 +1,59 @@
+@startuml
+
+class Zoo {
+-animals : ArrayList<Case> 
++afficherAnimals()
++donnerAManger()
++AfficherDeNouveau() 
+
+}
+
+class Animal{
+-nom: String
+-age: int
+-poids: double
++manger(): String
++dormir(): 
++grossir(poids: double)
++perdreDuPoids(poids: double) 
+}
+
+class Lion{
++sauter() 
++courir()
++crier(rougir: String)
++devorer()
+}
+
+class Singe {
++sauter() 
++crier(babouiner: String)
+}
+
+class Gazelle {
+-longueurCornes: double
+
++courir()
+}
+
+class Cage{
+-lesCage: Animals[]
+
++cageVide()
++ouvrirCage()
++sortirUnAnimal()
++fermerCage()
+
+}
+
+class Visiteur {
+- nombreDeVisiteur :  int
+}
+
+Agence -- " leClient 0--1" Client
+Agence o-- "0--1  laVoiture " Voiture
+Voiture o-- "1 leMoteur" Moteur
+Moteur *-- "2--12 lesCylindres" Cylindre
+Client -- " laVoiture 0--1" Voiture
+
+@enduml
