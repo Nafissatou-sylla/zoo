@@ -47,13 +47,8 @@ class Cage{
 }
 
 class Visiteur {
-- nombreDeVisiteur :  int
+-{static} nombreDeVisiteur:  int
 }
 
-Agence -- " leClient 0--1" Client
-Agence o-- "0--1  laVoiture " Voiture
-Voiture o-- "1 leMoteur" Moteur
-Moteur *-- "2--12 lesCylindres" Cylindre
-Client -- " laVoiture 0--1" Voiture
 
 @enduml
