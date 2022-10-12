@@ -47,8 +47,14 @@ class Cage{
 }
 
 class Visiteur {
--{static} nombreDeVisiteur:  int
+-nombreDeVisiteur: int
 }
 
+Zoo -- " animals 0--n" Animal
+Zoo o-- "  0--n  cages" Cage
+Visiteur "0--10  visiteurs" -- Zoo
+Animal <|-- Lion
+Animal <|-- Singe
+Animal <|-- Gazelle
 
 @enduml
