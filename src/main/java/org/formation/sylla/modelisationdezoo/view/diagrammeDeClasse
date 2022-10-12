@@ -8,14 +8,15 @@ class Zoo {
 
 }
 
-class Animal{
+Abstract class Animal{
 -nom: String
 -age: int
 -poids: double
-+manger(): String
-+dormir(): 
-+grossir(poids: double)
-+perdreDuPoids(poids: double) 
+
++{abstract} manger(): String
++{abstract} dormir(): 
++{abstract} grossir(poids: double)
++{abstract} perdreDuPoids(poids: double) 
 }
 
 class Lion{
