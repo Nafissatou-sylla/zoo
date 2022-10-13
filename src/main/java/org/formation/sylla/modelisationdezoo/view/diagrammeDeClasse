@@ -28,7 +28,7 @@ class Lion{
 
 class Singe {
 +sauter() 
-+crier(babouiner: String)
++crier(): String
 }
 
 class Gazelle {

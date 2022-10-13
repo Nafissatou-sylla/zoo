@@ -12,34 +12,32 @@ public class Lion extends Animal{
 		super(name, age, weight);
 	}
 
+	
 	/**
 	 * when the lion eats he grows 1,9kg
 	 */
 	@Override
 	public void eat() { this.grow(1.9); }
 	
+	
 	/**
 	 * when the lion sleeps he loses 0,3 kg
 	 */
-
 	@Override
 	public void sleep() { this.losingWeight(0.3); }
-
-	/**
-	 * return lion's weight + @param weight
-	 */
-	@Override
-	public double grow(double weight) { return this.getWeight() + weight; }
-
-	/**
-	 * return lion's weight - @param weight
-	 */
-	@Override
-	public double losingWeight(double weight) { return this.getWeight() - weight; }
 	
+	
+	/**
+	 * when lion jumps he loses 0,5 KG
+	 */
 	public void jump() { this.losingWeight(0.5); }
 	
+	
+	/**
+	 * when the lion run he loses 0.35 KG
+	 */
 	public void run() {this.losingWeight(0.35); }
+	
 	
 	/**
 	 * 

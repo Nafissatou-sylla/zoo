@@ -37,12 +37,22 @@ public abstract class Animal {
 
 
 	/**
+	 * return animal's weight + @param weight
+	 */
+	protected double grow(double weight) { return this.getWeight() + weight; }
+
+	/**
+	 * return animal's weight - @param weight
+	 */
+	protected double losingWeight(double weight) { return this.getWeight() - weight; }
+
+	
+	/**
 	 * 
 	 * abstract methods
 	 */
 	public abstract void eat();
 	public abstract void sleep();
-	public abstract double grow(double weight);
-	public abstract double losingWeight(double weight);
+	
 	
 }
