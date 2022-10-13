@@ -23,13 +23,26 @@ public abstract class Animal {
 		this.weight = weight;
 	}
 	
+	
+	public String getName() { return name; }
+	public void setName(String name) { this.name = name; }
+
+
+	public int getAge() { return age; }
+	public void setAge(int age) { this.age = age; }
+
+
+	public double getWeight() { return weight; }
+	public void setWeight(double weight) { this.weight = weight; }
+
+
 	/**
 	 * 
 	 * abstract methods
 	 */
-	public abstract String eat();
+	public abstract void eat();
 	public abstract void sleep();
-	public abstract void grow();
-	public abstract void losingWeight();
+	public abstract double grow(double weight);
+	public abstract double losingWeight(double weight);
 	
 }

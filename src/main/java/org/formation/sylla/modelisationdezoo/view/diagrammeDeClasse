@@ -13,16 +13,16 @@ Abstract class Animal{
 -age: int
 -poids: double
 
-+{abstract} manger(): String
-+{abstract} dormir(): 
-+{abstract} grossir(poids: double)
-+{abstract} perdreDuPoids(poids: double) 
++{abstract} manger()
++{abstract} dormir()
++{abstract} grossir(poids: double): double
++{abstract} perdreDuPoids(poids: double: double 
 }
 
 class Lion{
 +sauter() 
 +courir()
-+crier(rougir: String)
++crier() : String
 +devorer()
 }
 
