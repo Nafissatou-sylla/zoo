@@ -21,7 +21,7 @@ public class Lion extends Animal{
 	
 	
 	/**
-	 * when the lion sleeps he loses 0,3 kg
+	 * when the lion sleeps he loses 0,3kg
 	 */
 	@Override
 	public void sleep() { this.losingWeight(0.3); }

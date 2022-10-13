@@ -47,7 +47,7 @@ public abstract class Animal {
 	protected double losingWeight(double weight) { return this.getWeight() - weight; }
 
 	
-	/**
+	/** 
 	 * 
 	 * abstract methods
 	 */

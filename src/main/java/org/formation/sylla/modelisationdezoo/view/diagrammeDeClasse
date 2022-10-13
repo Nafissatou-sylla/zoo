@@ -1,7 +1,8 @@
 @startuml
 
 class Zoo {
--animals : ArrayList<Case> 
+-cages: ArrayList<Case> 
+
 +afficherAnimals()
 +donnerAManger()
 +AfficherDeNouveau() 
@@ -38,7 +39,7 @@ class Gazelle {
 }
 
 class Cage{
--lesCage: Animals[]
+-animal: Animal
 
 +cageVide()
 +ouvrirCage()
@@ -51,7 +52,7 @@ class Visiteur {
 -nombreDeVisiteur: int
 }
 
-Zoo -- " animals 0--n" Animal
+Zoo -- " 0--n animals" Animal
 Zoo o-- "0--n  cages" Cage
 Cage o-- " 1 animal" Animal
 Visiteur "0--10  visiteurs" -- Zoo
