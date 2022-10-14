@@ -7,13 +7,13 @@ package org.formation.sylla.modelisationdezoo.controler;
  * @author finas
  *
  */
-public class Visiteur {
+public class Visitor {
 	private int weight;
 
 	/**
 	 * @param weight
 	 */
-	public Visiteur(int weight) {
+	public Visitor(int weight) {
 		this.setWeight(weight);
 	}
 
@@ -31,6 +31,4 @@ public class Visiteur {
 		this.weight = weight;
 	}
 	
-	
-
 }

@@ -19,7 +19,7 @@ public class Gazelle extends Animal{
 	public void setHornLenght(double hornLenght) { this.hornLenght = hornLenght; }
 
 	@Override
-	public void eat() { this.grow(0.4); }
+	public void eat() { this.grow(0.40);}
 
 	@Override
 	public void sleep() { this.losingWeight(0.1); }

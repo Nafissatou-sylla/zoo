@@ -34,7 +34,7 @@ public abstract class Animal {
 	public void setAge(int age) { this.age = age; }
 
 
-	public double getWeight() { return weight; }
+	public double getWeight() { return this.weight; }
 	public void setWeight(double weight) { this.weight = weight; }
 	
 	
@@ -45,12 +45,12 @@ public abstract class Animal {
 	/**
 	 * return animal's weight + @param weight
 	 */
-	protected double grow(double weight) { return this.getWeight() + weight; }
+	protected void grow(double weight ) {  this.setWeight( this.getWeight() + weight );}
 
 	/**
 	 * return animal's weight - @param weight
 	 */
-	protected double losingWeight(double weight) { return this.getWeight() - weight; }
+	protected void losingWeight(double weight) {  this.setWeight(this.getWeight() - weight);; }
 
 	
 	/** 

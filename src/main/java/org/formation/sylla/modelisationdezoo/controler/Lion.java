@@ -11,13 +11,16 @@ public class Lion extends Animal{
 	public Lion(String name, int age, double weight) {
 		super(name, age, weight);
 	}
-
+	
+	
 	/**
 	 * when the lion eats he grows 1,9kg
 	 */
 	@Override
 	public void eat() { this.grow(1.9); }
 	
+	public void devour(Gazelle gazelle) { this.grow(gazelle.getWeight() / 3);}
+	public void devour(Visitor visitor) {this.grow(visitor.getWeight() / 3);}
 	
 	/**
 	 * when the lion sleeps he loses 0,3kg
@@ -44,6 +47,5 @@ public class Lion extends Animal{
 	 */
 	public String cry() { return " rugir" ; }
 	
-	public void devour() {}
 
 }
