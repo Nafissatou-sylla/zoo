@@ -52,7 +52,7 @@ class Visiteur {
 -nombreDeVisiteur: int
 }
 
-Zoo -- " 0--n animals" Animal
+Zoo o-- " 0--n animals" Animal
 Zoo o-- "0--n  cages" Cage
 Cage o-- " 1 animal" Animal
 Visiteur "0--10  visiteurs" -- Zoo

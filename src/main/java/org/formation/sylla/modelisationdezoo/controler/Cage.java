@@ -15,7 +15,6 @@ public class Cage {
 	}
 
 
-
 	/**
 	 * @return the animal
 	 */

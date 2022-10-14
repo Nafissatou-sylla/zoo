@@ -12,7 +12,6 @@ public class Lion extends Animal{
 		super(name, age, weight);
 	}
 
-	
 	/**
 	 * when the lion eats he grows 1,9kg
 	 */
