@@ -5,7 +5,6 @@ class Zoo {
 
 +afficherAnimals()
 +donnerAManger()
-+AfficherDeNouveau() 
 
 }
 
@@ -14,17 +13,19 @@ Abstract class Animal{
 -age: int
 -poids: double
 
+#grossir(poids: double)
+#perdreDuPoids(poids: double) 
 +{abstract} manger()
 +{abstract} dormir()
-+{abstract} grossir(poids: double): double
-+{abstract} perdreDuPoids(poids: double: double 
 }
 
 class Lion{
 +sauter() 
 +courir()
 +crier() : String
-+devorer()
++devorer(gazelle: Gazelle)
++devorer(visiteur: Visiteur)
+
 }
 
 class Singe {
@@ -38,21 +39,13 @@ class Gazelle {
 +courir()
 }
 
-class Cage{
--animal: Animal
-
-+cageVide()
-+ouvrirCage()
-+sortirUnAnimal()
-+fermerCage()
-
-}
+class Cage{ }
 
 class Visiteur {
--nombreDeVisiteur: int
+-poids: double
 }
 
-Zoo o-- " 0--n animals" Animal
+
 Zoo o-- "0--n  cages" Cage
 Cage o-- " 1 animal" Animal
 Visiteur "0--10  visiteurs" -- Zoo
