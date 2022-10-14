@@ -43,12 +43,13 @@ public abstract class Animal {
 
 
 	/**
-	 * return animal's weight + @param weight
+	 * 
+	 * @param weight change the animal weight in this weight + @param weight
 	 */
 	protected void grow(double weight ) {  this.setWeight( this.getWeight() + weight );}
 
 	/**
-	 * return animal's weight - @param weight
+	 * @param weight change the animal weight in this weight - @param weight
 	 */
 	protected void losingWeight(double weight) {  this.setWeight(this.getWeight() - weight);; }
 

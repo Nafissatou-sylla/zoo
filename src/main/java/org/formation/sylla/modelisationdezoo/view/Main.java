@@ -27,7 +27,7 @@ public class Main {
 		
 		zoo.displayAnimal(cages);
 		
-		lion.eat(visitor);
+		lion.devour(visitor);
 		
 		zoo.getEatToAnimal(lion);
 		zoo.getEatToAnimal(monkey);
@@ -36,8 +36,5 @@ public class Main {
 		
 		System.out.println("\n" + "les animaux aprés avoir mangé" + "\n");
 		zoo.displayAnimal(cages);
-		
-
 	}
-
 }

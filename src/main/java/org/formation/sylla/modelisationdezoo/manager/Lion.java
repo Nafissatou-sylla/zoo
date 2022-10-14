@@ -19,7 +19,17 @@ public class Lion extends Animal{
 	@Override
 	public void eat() { this.grow(1.9); }
 	
+	/**
+	 * when the lion eats the gazelle he grows
+	 * @param gazelle the gazelle to eat
+	 */
 	public void devour(Gazelle gazelle) { this.grow(gazelle.getWeight() / 3);}
+	
+	
+	/**
+	 * when the lion eats the visitor he grows
+	 * @param visitor the visitor to eat
+	 */
 	public void devour(Visitor visitor) {this.grow(visitor.getWeight() / 3);}
 	
 	/**

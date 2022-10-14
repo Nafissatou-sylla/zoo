@@ -18,12 +18,22 @@ public class Gazelle extends Animal{
 	 */
 	public void setHornLenght(double hornLenght) { this.hornLenght = hornLenght; }
 
+	/**
+	 * when the gazelle eats she grows 0.4kg
+	 */
 	@Override
 	public void eat() { this.grow(0.40);}
 
+	
+	/**
+	 * when the gazelle sleeps she loses 0.1kg
+	 */
 	@Override
 	public void sleep() { this.losingWeight(0.1); }
 
+	/**
+	 * when the gazelle jump she losess 0.07kg
+	 */
 	public void jump() { this.losingWeight(0.07); }
 
 }
