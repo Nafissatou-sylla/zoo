@@ -1,10 +1,10 @@
-package org.formation.sylla.modelisationdezoo.controler;
+package org.formation.sylla.modelisationdezoo.manager;
 
 public class Lion extends Animal{
 	
 	/**
 	 * 
-	 * @param name Lion name's in super class
+	 * @param name LionTest name's in super class
 	 * @param age lion's age in super class
 	 * @param weight lion's weight in super class
 	 */

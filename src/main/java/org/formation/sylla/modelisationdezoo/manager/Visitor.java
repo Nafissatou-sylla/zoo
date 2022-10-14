@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.formation.sylla.modelisationdezoo.controler;
+package org.formation.sylla.modelisationdezoo.manager;
 
 /**
  * @author finas

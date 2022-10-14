@@ -1,4 +1,4 @@
-package org.formation.sylla.modelisationdezoo.controler;
+package org.formation.sylla.modelisationdezoo.manager;
 
 /**
  * class abstract Animal

@@ -2,12 +2,12 @@ package org.formation.sylla.modelisationdezoo.view;
 
 import java.util.ArrayList;
 
-import org.formation.sylla.modelisationdezoo.controler.Cage;
-import org.formation.sylla.modelisationdezoo.controler.Gazelle;
-import org.formation.sylla.modelisationdezoo.controler.Lion;
-import org.formation.sylla.modelisationdezoo.controler.Monkey;
-import org.formation.sylla.modelisationdezoo.controler.Visitor;
-import org.formation.sylla.modelisationdezoo.controler.Zoo;
+import org.formation.sylla.modelisationdezoo.manager.Cage;
+import org.formation.sylla.modelisationdezoo.manager.Gazelle;
+import org.formation.sylla.modelisationdezoo.manager.Lion;
+import org.formation.sylla.modelisationdezoo.manager.Monkey;
+import org.formation.sylla.modelisationdezoo.manager.Visitor;
+import org.formation.sylla.modelisationdezoo.manager.Zoo;
 
 public class Main {
 
@@ -16,8 +16,8 @@ public class Main {
 		Cage cage = new Cage();
 		ArrayList<Cage> cages = new ArrayList<>();
 		
-		Lion lion = new Lion("Le lion ", 1, 5.0);
-		Monkey monkey = new Monkey("Le Singe ", 1, 3.0);
+		Lion lion = new Lion("Le lion ", 1, 15.0);
+		Monkey monkey = new Monkey("Le Singe ", 1, 6.0);
 		Gazelle gazelle = new Gazelle("La Gazelle ", 1, 9.0 , 2);
 		Visitor visitor = new Visitor(15);
 		
