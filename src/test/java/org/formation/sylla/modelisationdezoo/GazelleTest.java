@@ -10,7 +10,7 @@ class GazelleTest {
 	double initWeight;
 	
 	@BeforeEach
-	void initialisingLion() {
+	void initGazelle() {
 		gazelle = new Gazelle("Gazelle", 1, 6.5, 2.3);
 		initWeight = gazelle.getWeight();
 	}

@@ -10,7 +10,7 @@ class MonkeyTest{
 	double initWeight;
 	
 	@BeforeEach
-	void initialisingLion() {
+	void initMonkey() {
 		monkey = new Monkey("Singe", 1, 7.0);
 		 initWeight = monkey.getWeight();
 	}
