@@ -34,5 +34,5 @@ public class Monkey extends Animal{
 	 * 
 	 * @return monkey's cry's type
 	 */
-	public String cry() {return "Babouiner "; }
+	public String cry() {return "Babouiner"; }
 }

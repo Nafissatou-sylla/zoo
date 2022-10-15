@@ -8,7 +8,7 @@ import org.formation.sylla.modelisationdezoo.manager.Visitor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class LionTest extends AnimalTest{
+class LionTest{
 	Lion lion;
 	double initWeight;
 	
