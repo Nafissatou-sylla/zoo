@@ -13,16 +13,12 @@ public class Visitor {
 	/**
 	 * @param weight visitor's weight
 	 */
-	public Visitor(int weight) { this.setWeight(weight); }
+	public Visitor(int weight) { this.weight = weight; }
 
 	/**
 	 * @return visitor's weight
 	 */
 	public int getWeight() { return weight;}
 
-	/**
-	 * @param weight the weight to set
-	 */
-	public void setWeight(int weight) { this.weight = weight;}
 	
 }
