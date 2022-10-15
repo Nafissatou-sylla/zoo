@@ -5,7 +5,7 @@ import org.formation.sylla.modelisationdezoo.manager.Monkey;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class MonkeyTest extends AnimalTest{
+class MonkeyTest{
 	Monkey monkey;
 	double initWeight;
 	
