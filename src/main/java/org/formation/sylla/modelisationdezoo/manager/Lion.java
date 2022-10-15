@@ -55,7 +55,7 @@ public class Lion extends Animal{
 	 * 
 	 * @return lion cry's type
 	 */
-	public String cry() { return " rugir" ; }
+	public String cry() { return "rugir" ; }
 	
 
 }
