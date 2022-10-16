@@ -21,7 +21,7 @@ class ZooTest {
 	void initZoo() {
 		zoo = new Zoo();
 		cages = new ArrayList<>();
-		visitors = new ArrayList<>();
+		visitors = new ArrayList<>(10);
 	}
 	
 	@Test
@@ -44,17 +44,35 @@ class ZooTest {
 	
 	
 	@Test
-	void testAVisitor() {
-		zoo.aVisitor(visitors);
+	void testAddVisitor() {
+		ArrayList<Visitor> visitorList = new ArrayList<>();
+		Visitor visitor1= new Visitor(19);
+		Visitor visitor2= new Visitor(24);
+		Visitor visitor3= new Visitor(24);
+
+		visitorList.add(visitor1);
+		visitorList.add(visitor2);
+		visitorList.add(visitor3);
+		assertEquals(zoo.addVisitor(visitorList), visitorList);
 	}
+	
 	
 	@Test
 	void testTakeOutAVisitor() {
 		ArrayList<Visitor> visitorList = new ArrayList<>();
-		visitors.add(new Visitor(25));
-		visitors.add(new Visitor(29));
-		zoo.takeOutAVisitor(visitorList);
-		assertEquals(null, visitorList);
-	}
+		Visitor visitor1= new Visitor(19);
+		Visitor visitor2= new Visitor(24);
+		Visitor visitor3= new Visitor(24);
+
+		visitorList.add(visitor1);
+		visitorList.add(visitor2);
+		visitorList.add(visitor3);
+
+		Visitor visitor = zoo.takeOutAVisitor(visitorList);
+		int value = visitorList.size();
+		
+		assertEquals( visitor, visitor3 );
+		assertEquals( value, 2 );
+	} 
 }
 	

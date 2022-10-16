@@ -57,12 +57,13 @@ public class Zoo {
 	 * 
 	 * @param visitors the list of visitor to add in the zoo
 	 */
-	public void aVisitor(ArrayList<Visitor> visitors) {
+	public ArrayList<Visitor> addVisitor(ArrayList<Visitor> visitors) {
 		double weight = 50;
 		for(int i=0; i<= visitorSize; i++) {
 			visitors.add(new Visitor(weight));
+			weight++;
 		 }
-		weight++;
+		return visitors;
 	}
 	
 	
@@ -71,15 +72,8 @@ public class Zoo {
 	 * @param visitors visitors the list of visitor to add in the zoo
 	 * @return the visitor to get out
 	 */
-	public void takeOutAVisitor(ArrayList<Visitor> visitors) {
-		visitors.remove(visitors.get(visitorSize));
-
+	public Visitor takeOutAVisitor(ArrayList<Visitor> visitors) {
+		return visitors.remove( visitors.size()-1 );
 	}
 
-	/**
-	 * @return the visitors
-	 */
-	public ArrayList<Visitor> getVisitors() {return visitors;}
-	
-	public void setVisitors(ArrayList<Visitor> visitors) { this.visitors = visitors;}
 }
