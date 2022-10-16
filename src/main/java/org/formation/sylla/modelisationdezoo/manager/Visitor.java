@@ -8,17 +8,17 @@ package org.formation.sylla.modelisationdezoo.manager;
  *
  */
 public class Visitor {
-	private int weight;
+	private double weight;
 
 	/**
 	 * @param weight visitor's weight
 	 */
-	public Visitor(int weight) { this.weight = weight; }
+	public Visitor(double weight) { this.weight = weight; }
 
 	/**
 	 * @return visitor's weight
 	 */
-	public int getWeight() { return weight;}
+	public double getWeight() { return weight;}
 
 	
 }

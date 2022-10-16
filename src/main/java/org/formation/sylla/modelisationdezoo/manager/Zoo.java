@@ -27,6 +27,7 @@ public class Zoo {
 	 * @param cages the cages to set
 	 */
 	public void setCages(ArrayList<Cage> cages) { this.cages = cages; }
+	
 
 	/**
 	 * display all animals in the cage of the zoo
@@ -43,6 +44,7 @@ public class Zoo {
 		}
 	}
 	
+	  
 	
 	/**
 	 * 
@@ -56,9 +58,11 @@ public class Zoo {
 	 * @param visitors the list of visitor to add in the zoo
 	 */
 	public void aVisitor(ArrayList<Visitor> visitors) {
+		double weight = 50;
 		for(int i=0; i<= visitorSize; i++) {
-			visitors.add(new Visitor(11));
-		}
+			visitors.add(new Visitor(weight));
+		 }
+		weight++;
 	}
 	
 	
@@ -67,12 +71,8 @@ public class Zoo {
 	 * @param visitors visitors the list of visitor to add in the zoo
 	 * @return the visitor to get out
 	 */
-	public Visitor takeOutAVisitor(ArrayList<Visitor> visitors) {
-		Visitor visitor = null;
-		for(int i=0; i<= visitorSize; i++) {
-			visitor = visitors.remove(i);
-		}
-		return visitor;
+	public void takeOutAVisitor(ArrayList<Visitor> visitors) {
+		visitors.remove(visitors.get(visitorSize));
 
 	}
 
