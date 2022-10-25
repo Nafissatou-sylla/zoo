@@ -3,11 +3,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 
-import org.formation.sylla.modelisationdezoo.manager.Animal;
-import org.formation.sylla.modelisationdezoo.manager.Cage;
-import org.formation.sylla.modelisationdezoo.manager.Lion;
-import org.formation.sylla.modelisationdezoo.manager.Visitor;
-import org.formation.sylla.modelisationdezoo.manager.Zoo;
+import org.formation.sylla.modelisationdezoo.model.Animal;
+import org.formation.sylla.modelisationdezoo.model.Cage;
+import org.formation.sylla.modelisationdezoo.model.Lion;
+import org.formation.sylla.modelisationdezoo.model.Visitor;
+import org.formation.sylla.modelisationdezoo.view.Zoo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

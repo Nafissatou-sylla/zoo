@@ -2,12 +2,11 @@
 
 import java.util.ArrayList;
 
-import org.formation.sylla.modelisationdezoo.manager.Cage;
-import org.formation.sylla.modelisationdezoo.manager.Gazelle;
-import org.formation.sylla.modelisationdezoo.manager.Lion;
-import org.formation.sylla.modelisationdezoo.manager.Monkey;
-import org.formation.sylla.modelisationdezoo.manager.Visitor;
-import org.formation.sylla.modelisationdezoo.manager.Zoo;
+import org.formation.sylla.modelisationdezoo.model.Cage;
+import org.formation.sylla.modelisationdezoo.model.Gazelle;
+import org.formation.sylla.modelisationdezoo.model.Lion;
+import org.formation.sylla.modelisationdezoo.model.Monkey;
+import org.formation.sylla.modelisationdezoo.model.Visitor;
 
 public class Main {
 

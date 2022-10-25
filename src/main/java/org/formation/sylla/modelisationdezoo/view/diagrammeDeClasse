@@ -1,5 +1,8 @@
 @startuml
 
+class Manager{
+}
+
 class Zoo {
 -cages: ArrayList<Case> 
 
@@ -45,10 +48,12 @@ class Visiteur {
 -poids: double
 }
 
-
+Manager *-- Animal
 Zoo o-- "0--n  cages" Cage
 Cage o-- " 1 animal" Animal
 Visiteur "0--10  visiteurs" -- Zoo
+Manager *-- Visiteur
+
 Animal <|-- Lion
 Animal <|-- Singe
 Animal <|-- Gazelle

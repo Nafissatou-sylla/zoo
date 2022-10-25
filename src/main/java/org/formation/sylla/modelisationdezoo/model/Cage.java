@@ -1,4 +1,4 @@
-package org.formation.sylla.modelisationdezoo.manager;
+package org.formation.sylla.modelisationdezoo.model;
 
 
 public class Cage {

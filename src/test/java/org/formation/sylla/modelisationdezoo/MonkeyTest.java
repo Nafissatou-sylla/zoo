@@ -1,7 +1,8 @@
 package org.formation.sylla.modelisationdezoo;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.formation.sylla.modelisationdezoo.manager.Monkey;
+
+import org.formation.sylla.modelisationdezoo.model.Monkey;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
