@@ -1,4 +1,4 @@
-package org.formation.sylla.modelisationdezoo;
+package org.formation.sylla.modelisationdezoo.model;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -14,7 +14,7 @@ class CageTest {
 	
 	@BeforeEach
 	void initCage() {
-		cage = new Cage(animal);
+		cage = new Cage();
 	}
 	
 	@Test
@@ -27,5 +27,20 @@ class CageTest {
 		Animal value = cage.getAnimal();
 		assertEquals(value, newAnimal);
 		
+	}
+	
+	@Test
+	void testTakeOutAnAnimal() {
+		assertEquals(cage.takeOutAnAnimal(), null);
+	}
+	
+	@Test
+	void testEntryAnAnimal() {
+	
+	}
+	
+	@Test
+	void testIsEmpty() {
+		assertEquals(cage.isEmpty(), true);
 	}
 }

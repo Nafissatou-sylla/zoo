@@ -12,6 +12,11 @@ public abstract class Animal {
 	private double weight;
 	private double hornLenght;
 	
+	public Animal() {
+		this("xx", 1, 12.5);
+	}
+	
+	
 	/**
 	 * 
 	 * @param name animal's name
@@ -54,6 +59,13 @@ public abstract class Animal {
 	protected void losingWeight(double weight) {  this.setWeight(this.getWeight() - weight);; }
 
 	
+	
+	@Override
+	public String toString() {
+		return "Animal [name=" + this.name + ", age=" + this.age + "ans , weight=" + this.weight + "kg ]";
+	}
+
+
 	/** 
 	 * 
 	 * abstract methods

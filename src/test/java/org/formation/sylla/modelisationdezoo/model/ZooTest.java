@@ -1,4 +1,4 @@
-package org.formation.sylla.modelisationdezoo;
+package org.formation.sylla.modelisationdezoo.model;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
