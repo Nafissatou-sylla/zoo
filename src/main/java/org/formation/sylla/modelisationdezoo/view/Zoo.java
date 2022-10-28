@@ -2,6 +2,10 @@ package org.formation.sylla.modelisationdezoo.view;
 
 import java.util.ArrayList;
 
+import org.formation.sylla.modelisationdezoo.controleur.Manager;
+import org.formation.sylla.modelisationdezoo.model.Cage;
+import org.formation.sylla.modelisationdezoo.model.Visitor;
+
 public class Zoo {
 	private ArrayList<Cage> cages;
 	private  ArrayList<Visitor> visitors;
@@ -29,29 +33,6 @@ public class Zoo {
 	public void setCages(ArrayList<Cage> cages) { this.cages = cages; }
 	
 
-	/**
-	 * display all animals in the cage of the zoo
-	 * @param cages the list cages in the zoo
-	 */
-	public void displayAnimal(ArrayList<Cage> cages) {
-		for(Cage cage: cages) {
-			System.out.print(cage.getAnimal().getName() + 
-					cage.getAnimal().getAge() + " ans " + 
-					cage.getAnimal().getWeight() + "kg  " );
-			if(cage.getAnimal().getName() == "La Gazelle ") {
-				System.out.print(cage.getAnimal().getHornLenght() + "cm");}
-			System.out.println();
-		}
-	}
-	
-	  
-	
-	/**
-	 * 
-	 * @param animal the animal's who should eat
-	 */
-	public void getEatToAnimal(Animal animal) { animal.eat();}
-	
 	
 	/**
 	 * 
@@ -74,6 +55,18 @@ public class Zoo {
 	 */
 	public Visitor takeOutAVisitor(ArrayList<Visitor> visitors) {
 		return visitors.remove( visitors.size()-1 );
+	}
+	
+	
+	public void giveEat() {
+		Manager.getInstance().getEatToAnimal();
+	}
+	
+	
+	public void display() {
+		for (String string: Manager.getInstance().displayAnimals()) {
+			System.out.println(string);
+		}
 	}
 
 }

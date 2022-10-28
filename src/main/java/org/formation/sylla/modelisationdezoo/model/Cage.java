@@ -35,6 +35,13 @@ public class Cage {
 	}
 	
 	
+	
+	@Override
+	public String toString() {
+		return "Cage [animal=" + animal.toString() + "]";
+	}
+
+
 	/**
 	 * 
 	 * @return the animal who should go out in the cage
@@ -44,6 +51,15 @@ public class Cage {
 		tmp = this.animal;
 		this.animal = null;
 		return tmp;
+	}
+	
+	/**
+	 * method to give eat the animal in the cage
+	 */
+	public void eat() {
+		if(animal != null) {
+			animal.eat();
+		}
 	}
 	
 	
