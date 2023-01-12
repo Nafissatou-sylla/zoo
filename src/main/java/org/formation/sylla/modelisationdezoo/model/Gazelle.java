@@ -32,9 +32,9 @@ public class Gazelle extends Animal{
 	public void sleep() { this.losingWeight(0.1); }
 
 	/**
-	 * when the gazelle jump she losess 0.07kg
+	 * when the gazelle run she losess 0.07kg
 	 */
-	public void jump() { this.losingWeight(0.07); }
+	public void run() { this.losingWeight(0.07); }
 
 	@Override
 	public String toString() {

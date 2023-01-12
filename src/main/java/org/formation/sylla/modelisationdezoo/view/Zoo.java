@@ -1,20 +1,25 @@
 package org.formation.sylla.modelisationdezoo.view;
+import org.formation.sylla.modelisationdezoo.controleur.Manager;
 
 import java.util.ArrayList;
 
-import org.formation.sylla.modelisationdezoo.controleur.Manager;
+import org.formation.sylla.modelisationdezoo.model.Animal;
 import org.formation.sylla.modelisationdezoo.model.Cage;
+import org.formation.sylla.modelisationdezoo.model.Lion;
 import org.formation.sylla.modelisationdezoo.model.Visitor;
 
 public class Zoo {
 	private ArrayList<Cage> cages;
 	private  ArrayList<Visitor> visitors;
 	private final int visitorSize = 10;
+	private Animal animal;
 	
 	public Zoo() {
 		this.visitors = null;
-		this.cages = new ArrayList<>();
+		this.cages = new ArrayList<Cage>();
 	}
+	
+	
 
 	/**
 	 * @param cages the zoo's cages
@@ -59,6 +64,7 @@ public class Zoo {
 	
 	
 	public void giveEat() {
+		
 		Manager.getInstance().getEatToAnimal();
 	}
 	

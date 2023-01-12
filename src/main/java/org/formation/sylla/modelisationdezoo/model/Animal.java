@@ -10,7 +10,6 @@ public abstract class Animal {
 	private String name;
 	private int age;
 	private double weight;
-	private double hornLenght;
 	
 	public Animal() {
 		this("animal", 1, 12.5);
@@ -40,10 +39,6 @@ public abstract class Animal {
 
 	public double getWeight() { return this.weight; }
 	public void setWeight(double weight) { this.weight = weight; }
-	
-	
-	public double getHornLenght() { return hornLenght; }
-	public void setHornLenght(double hornLenght) { this.hornLenght = hornLenght;}
 
 
 	/**

@@ -1,0 +1,86 @@
+@startuml
+
+package "controleur" {
+	class Manager <<Singleton>> {
+		-{static} instance: Manager
+		-cages: Cage[]
+		
+		-init()
+		+displayAnimals(): List<String>
+		+getEatToAnimal()
+	}
+}
+
+package "model" {
+	Abstract class Animal{
+		-nom: String
+		-age: int
+		-poids: double
+
+		#grossir(poids: double)
+		#perdreDuPoids(poids: double) 
+		+{abstract} manger()
+		+{abstract} dormir()
+	}
+
+	class Lion{
+		+sauter() 
+		+courir()
+		+crier() : String
+		+devorer(gazelle: Gazelle)
+		+devorer(visiteur: Visiteur)
+
+	}
+
+	class Singe {
+		+sauter() 
+		+crier(): String
+	}
+
+	class Gazelle {
+		-longueurCornes: double
+		
+		+courir()
+	}
+
+	class Cage{
+		-animal: Animal
+		+donnerAManger()
+		+estVide(): boolean
+		+entrerUnAnimal(animal: Animal)
+		+sortirUnAnimal(): Animal
+	 }
+
+	class Visiteur {
+		-poids: double
+	}
+}
+
+package "vue" {
+	class Zoo {
+		-animal: Animal
+		-cages: ArrayList<Case> 
+		-visiteurs: Visiteur
+		
+		+ajouterUnVisiteur(visiteurs: ArrayList<Visiteur>): ArrayList<Visiteur>
+		+afficherAnimals()
+		+donnerAManger()
+		+faireSortirUnVisiteur(visiteurs: List<Visiteurs>): Visiteur
+	}
+	
+	class Main{
+		
+	}	
+}
+
+Manager *-- Animal
+Zoo o-- "0--n  cages" Cage
+Cage -- " 1 animal" Animal
+Zoo -- "0--10  visiteurs"  Visiteur 
+Manager *-- Zoo
+
+Animal <|-- Lion
+Animal <|-- Singe
+Animal <|-- Gazelle
+ 
+@enduml

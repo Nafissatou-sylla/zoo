@@ -1,0 +1,11 @@
+@startuml
+
+class Zoo
+note right of Zoo :-contient des cages \n -contient des animaux \n -Affiche les animaux,\n -les donne à manger \n -réaffiche les animaux
+
+class Manager
+note right of Manager: Gére les animaux \n met les animaux dans les cages 
+
+class Cage
+note right of Cage :-contient un animal \n - on peut l'ouvrir et la fermer
+@enduml

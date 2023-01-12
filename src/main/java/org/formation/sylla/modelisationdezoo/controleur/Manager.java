@@ -12,11 +12,26 @@ import org.formation.sylla.modelisationdezoo.model.Monkey;
 import org.formation.sylla.modelisationdezoo.model.Visitor;
 import org.formation.sylla.modelisationdezoo.model.technique.CageOccupyException;
 
+/**
+ * classe Manager pour la gestion du zoo, c'est un singleton (le controleur) 
+ * @author SYLLA Nafissatou
+ *
+ */
+
 public class Manager {
+	/**
+	 * l'instance de la classe 
+	 */
 	private static Manager instance = new Manager();
+	
+	/**
+	 * un tableau de cage
+	 */
 	private Cage cages[];
 	
-	
+	/**
+	 * le constructeur
+	 */
 	private Manager() {
 		super();
 		cages= new Cage[3];
@@ -42,6 +57,10 @@ public class Manager {
 	}
 
 
+	/**
+	 * le getteur de l'attribut instance
+	 * @return l'attribut instance
+	 */
 	public static Manager getInstance() {
 		return instance;
 	}
