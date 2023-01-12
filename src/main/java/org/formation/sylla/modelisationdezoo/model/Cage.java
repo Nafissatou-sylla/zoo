@@ -4,9 +4,25 @@ import org.formation.sylla.modelisationdezoo.model.technique.CageOccupyException
 
 public class Cage {
 	private Animal animal;
-	
-	public Cage() {this.animal = null;}
 
+
+	public Cage() {this.animal = null;}
+	
+	
+	/**
+	 * 
+	 * @param animal the animal that enters in the cage
+	 * @throws CageOccupyException 
+	 */
+	public void enterAnAnimal(Animal animal) throws CageOccupyException {
+		if (this.animal != null) {
+			throw new CageOccupyException();
+		}
+		else {
+			this.setAnimal(animal);	
+		}
+	}
+	
 
 	/**
 	 * @return the animal in the cage
@@ -20,25 +36,9 @@ public class Cage {
 	public void setAnimal(Animal animal) { this.animal = animal;}
 	
 	
-	/**
-	 * 
-	 * @param animal the animal that enters in the cage
-	 * @throws CageOccupyException 
-	 */
-	public void enterAnAnimal(Animal animal) throws CageOccupyException {
-		if (this.animal != null) {
-			throw new CageOccupyException();
-		}
-		else {
-			this.animal = animal;
-		}
-	}
-	
-	
-	
 	@Override
 	public String toString() {
-		return "Cage [animal=" + animal.toString() + "]";
+		return "Cage de: " + this.getAnimal();
 	}
 
 

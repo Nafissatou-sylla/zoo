@@ -13,7 +13,7 @@ public abstract class Animal {
 	private double hornLenght;
 	
 	public Animal() {
-		this("xx", 1, 12.5);
+		this("animal", 1, 12.5);
 	}
 	
 	
@@ -27,7 +27,6 @@ public abstract class Animal {
 		this.name = name;
 		this.age = age;
 		this.weight = weight;
-		this.setHornLenght(0.0);
 	}
 	
 	
@@ -62,7 +61,7 @@ public abstract class Animal {
 	
 	@Override
 	public String toString() {
-		return "Animal [name=" + this.name + ", age=" + this.age + "ans , weight=" + this.weight + "kg ]";
+		return "name = " + this.getName() + ", age= " + this.getAge() + "ans , weight= " + this.getWeight() + "kg ";
 	}
 
 
@@ -72,8 +71,4 @@ public abstract class Animal {
 	 */
 	public abstract void eat();
 	public abstract void sleep();
-
-
-	
-	
 }

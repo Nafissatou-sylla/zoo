@@ -36,4 +36,13 @@ public class Gazelle extends Animal{
 	 */
 	public void jump() { this.losingWeight(0.07); }
 
+	@Override
+	public String toString() {
+		return  super.toString() + " hornLenght=" + hornLenght ;
+	}
+
+	
+	
+	
+
 }
