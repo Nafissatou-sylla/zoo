@@ -54,13 +54,20 @@ package "model" {
 	class Visiteur {
 		-poids: double
 	}
+	
+	package "technique"{
+		class CageOccupyException <<Exception >> {
+			+CageOccupyException(message: String)
+			+CageOccupyException()
+		}
+	}
 }
 
 package "vue" {
 	class Zoo {
 		-animal: Animal
 		-cages: ArrayList<Case> 
-		-visiteurs: Visiteur
+		-visiteurs: list<Visiteur>
 		
 		+ajouterUnVisiteur(visiteurs: ArrayList<Visiteur>): ArrayList<Visiteur>
 		+afficherAnimals()
@@ -73,12 +80,15 @@ package "vue" {
 	}	
 }
 
-Manager *-- Animal
-Zoo o-- "0--n  cages" Cage
-Cage -- " 1 animal" Animal
-Zoo -- "0--10  visiteurs"  Visiteur 
-Manager *-- Zoo
 
+Zoo  o-- "0--n  cages" Cage
+Cage -- "0--1 animal" Animal
+Zoo -- " 0--10  visiteurs "  Visiteur 
+Manager *----  Cage
+Zoo *----  Manager
+Main *--  Zoo
+
+Exception  <|-- CageOccupyException
 Animal <|-- Lion
 Animal <|-- Singe
 Animal <|-- Gazelle
