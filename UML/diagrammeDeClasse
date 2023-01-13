@@ -1,5 +1,22 @@
 @startuml
 
+package "vue" {
+	class Zoo {
+		-animal: Animal
+		-cages: ArrayList<Case> 
+		-visiteurs: list<Visiteur>
+		
+		+ajouterUnVisiteur(visiteurs: ArrayList<Visiteur>): ArrayList<Visiteur>
+		+afficherAnimals()
+		+donnerAManger()
+		+faireSortirUnVisiteur(visiteurs: List<Visiteurs>): Visiteur
+	}
+	
+	class Main{
+		
+	}	
+}
+
 package "controleur" {
 	class Manager <<Singleton>> {
 		-{static} instance: Manager
@@ -43,6 +60,11 @@ package "model" {
 		+courir()
 	}
 
+	interface Mangeable{
+		+devorer(gazelle: Gazelle): double
+		+devorer(visiteur: Visiteur): double
+	}
+	
 	class Cage{
 		-animal: Animal
 		+donnerAManger()
@@ -63,34 +85,18 @@ package "model" {
 	}
 }
 
-package "vue" {
-	class Zoo {
-		-animal: Animal
-		-cages: ArrayList<Case> 
-		-visiteurs: list<Visiteur>
-		
-		+ajouterUnVisiteur(visiteurs: ArrayList<Visiteur>): ArrayList<Visiteur>
-		+afficherAnimals()
-		+donnerAManger()
-		+faireSortirUnVisiteur(visiteurs: List<Visiteurs>): Visiteur
-	}
-	
-	class Main{
-		
-	}	
-}
 
 
-Zoo  o-- "0--n  cages" Cage
+Zoo *- "1 manager"  Manager
+Manager o--- "0--n  cages" Cage
+Main *--"1 zoo"  Zoo
+Zoo -" 0--10  visiteurs "  Visiteur
 Cage -- "0--1 animal" Animal
-Zoo -- " 0--10  visiteurs "  Visiteur 
-Manager *----  Cage
-Zoo *----  Manager
-Main *--  Zoo
 
 Exception  <|-- CageOccupyException
 Animal <|-- Lion
 Animal <|-- Singe
 Animal <|-- Gazelle
+Lion ..|> Mangeable
  
 @enduml

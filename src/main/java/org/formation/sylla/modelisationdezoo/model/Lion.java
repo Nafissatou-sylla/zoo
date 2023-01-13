@@ -1,6 +1,6 @@
 package org.formation.sylla.modelisationdezoo.model;
 
-public class Lion extends Animal{
+public class Lion extends Animal implements Mangeable{
 	
 	/**
 	 * 
@@ -19,18 +19,6 @@ public class Lion extends Animal{
 	@Override
 	public void eat() { this.grow(1.9); }
 	
-	/**
-	 * when the lion eats the gazelle he grows
-	 * @param gazelle the gazelle to eat
-	 */
-	public void devour(Gazelle gazelle) { this.grow(gazelle.getWeight() / 3);}
-	
-	
-	/**
-	 * when the lion eats the visitor he grows
-	 * @param visitor the visitor to eat
-	 */
-	public void devour(Visitor visitor) {this.grow(visitor.getWeight() / 3);}
 	
 	/**
 	 * when the lion sleeps he loses 0,3kg
@@ -56,6 +44,25 @@ public class Lion extends Animal{
 	 * @return lion cry's type
 	 */
 	public String cry() { return "rugir" ; }
-	
 
+	/**
+	 * when the lion eats the gazelle he grows
+	 * @param gazelle the gazelle to eat
+	 */
+	public double devorer(Gazelle gazelle) {
+		this.grow(gazelle.getWeight() / 3);
+		return this.getWeight();
+	}
+
+
+	/**
+	 * when the lion eats the visitor he grows
+	 * @param visitor the visitor to eat
+	 */
+	public double devorer(Visitor visitor) {
+		this.grow(visitor.getWeight() / 3);
+		return this.getWeight();
+	}
+
+	
 }
