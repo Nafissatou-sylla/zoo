@@ -66,7 +66,7 @@ class AnimalTest {
 
 	@Test
 	void testToString() {
-		    assertEquals(animal.toString(), "name = lion, age= 2ans , weight= 20.0kg ");
+		assertEquals(animal.toString(), "name = lion, age= 2ans , weight= 20.0kg ");
 	}
 	
 
