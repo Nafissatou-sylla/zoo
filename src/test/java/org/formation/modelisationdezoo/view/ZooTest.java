@@ -14,34 +14,14 @@ import org.junit.jupiter.api.Test;
 
 class ZooTest {
 	Zoo zoo;
-	//ArrayList<Cage> cages;
 	ArrayList<Visitor> visitors;
 	
 	
 	@BeforeEach
 	void initZoo() {
 		zoo = new Zoo();
-		//cages = new ArrayList<>();
 		visitors = new ArrayList<>(10);
 	}
-	
-//	@Test
-//	void testGetCage() { assertEquals( zoo.getCages(), cages); }
-//	
-//	@Test
-//	void testSetCage() {
-//		ArrayList<Cage> listCages = new ArrayList<>();
-//		zoo.setCages(listCages);
-//		ArrayList<Cage> value = zoo.getCages();
-//		assertEquals(listCages, value);
-//	}
-	
-//	@Test
-//	void testGetEatToAnimal() {
-//		for(int i=0; i<cages.size(); i++) {
-//		zoo.getCages().get(i).getAnimal().eat();
-//		}
-//	}
 	
 	
 	@Test
