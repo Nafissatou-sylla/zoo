@@ -1,8 +1,24 @@
 package org.formation.sylla.modelisationdezoo.model;
 
+/**
+ * classe de l'animal Gazelle
+ * @author SYLLA Nafissatou
+ *
+ */
 public class Gazelle extends Animal{
+	
+	/**
+	 * la longueur de corne de la gazelle
+	 */
 	private double hornLenght;
 	
+	/**
+	 * le constructeur
+	 * @param name le nom de la Gazelle
+	 * @param age son âge 
+	 * @param weight son poids
+	 * @param hornLenght la longueur de sa corne
+	 */
 	public Gazelle(String name, int age, double weight, double hornLenght) {
 		super(name, age, weight);
 		this.setHornLenght(hornLenght);
@@ -14,7 +30,7 @@ public class Gazelle extends Animal{
 	public double getHornLenght() { return hornLenght; }
 
 	/**
-	 * @param hornLenght the hornLenght to set
+	 * @param hornLenght change la longueur de corne de la gazelle et la remplace avec celle passé en paramétre
 	 */
 	public void setHornLenght(double hornLenght) { this.hornLenght = hornLenght; }
 
@@ -32,17 +48,14 @@ public class Gazelle extends Animal{
 	public void sleep() { this.losingWeight(0.1); }
 
 	/**
-	 * when the gazelle run she losess 0.07kg
+	 * when the gazelle run she loses 0.07kg
 	 */
 	public void run() { this.losingWeight(0.07); }
 
+	
 	@Override
 	public String toString() {
-		return  super.toString() + " hornLenght=" + hornLenght ;
+		return  super.toString() + " hornLenght= " + this.getHornLenght() ;
 	}
-
-	
-	
-	
 
 }

@@ -1,12 +1,10 @@
 package org.formation.sylla.modelisationdezoo.model;
 
 import static org.junit.jupiter.api.Assertions.*;
-
-import org.formation.sylla.modelisationdezoo.model.Gazelle;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class GazelleTest {
+class GazelleTest extends AnimalTest{
 	Gazelle gazelle;
 	double initWeight;
 	
@@ -23,10 +21,8 @@ class GazelleTest {
 	
 	@Test
 	void testSetName() {
-		String name = "Une Gazelle";
-		gazelle.setName(name);
-		String value = gazelle.getName();
-		assertEquals(name, value);
+		gazelle.setName("Une Gazelle");
+		assertEquals(gazelle.getName(),"Une Gazelle");
 	}
 	
 	@Test
@@ -34,10 +30,8 @@ class GazelleTest {
 	
 	@Test
 	void testSetAge() {
-		int age = 5;
-		gazelle.setAge(age);
-		int value = gazelle.getAge();
-		assertEquals(age, value);
+		gazelle.setAge(5);
+		assertEquals(gazelle.getAge(), 5);
 	}
 	
 	@Test
@@ -45,12 +39,9 @@ class GazelleTest {
 	
 	@Test
 	void testSetWeight() {
-		int weight = 15;
-		gazelle.setAge(weight);
-		int value = gazelle.getAge();
-		assertEquals(weight, value);
+		gazelle.setWeight(15);
+		assertEquals(gazelle.getWeight(), 15);
 	}
-	
 	
 	@Test
 	void testGetHornLenght() { assertEquals(gazelle.getHornLenght(), 2.3);}
@@ -82,10 +73,14 @@ class GazelleTest {
 
 	@Test
 	void testJump() {
-		gazelle.jump();
+		gazelle.run();
 		double newWeight = gazelle.getWeight();
 		assertEquals(newWeight, initWeight - 0.07);
 	}
 	
+	@Test
+	void testToString() {
+		assertEquals(gazelle.toString(), "name = Gazelle, age= 1ans , weight= 6.5kg " + " hornLenght= " + gazelle.getHornLenght() );
+	}
 }
 
