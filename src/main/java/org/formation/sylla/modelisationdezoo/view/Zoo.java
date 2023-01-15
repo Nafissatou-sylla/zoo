@@ -8,40 +8,37 @@ import org.formation.sylla.modelisationdezoo.model.Cage;
 import org.formation.sylla.modelisationdezoo.model.Lion;
 import org.formation.sylla.modelisationdezoo.model.Visitor;
 
+/**
+ * classe Zoo
+ * @author SYLLA Nafissatou
+ *
+ */
 public class Zoo {
-	private ArrayList<Cage> cages;
-	private  ArrayList<Visitor> visitors;
-	private final int visitorSize = 10;
-	private Animal animal;
 	
+	/**
+	 * la liste des visiteurs
+	 */
+	private  ArrayList<Visitor> visitors;
+	
+	
+	/**
+	 * le nombre maximum des visiteurs
+	 */
+	private final int visitorSize = 10;
+	
+	
+	/**
+	 * le constructeur qui initialise la liste des visisteurs à null (association)
+	 */
 	public Zoo() {
 		this.visitors = null;
-		this.cages = new ArrayList<Cage>();
 	}
-	
-	
-
-	/**
-	 * @param cages the zoo's cages
-	 */
-	public Zoo(ArrayList<Cage> cages) { this.setCages(cages); }
-
-	/**
-	 * @return the list of the cages in the zoo
-	 */
-	public ArrayList<Cage> getCages() { return cages; }
-
-	
-	/**
-	 * @param cages the cages to set
-	 */
-	public void setCages(ArrayList<Cage> cages) { this.cages = cages; }
-	
 
 	
 	/**
 	 * 
 	 * @param visitors the list of visitor to add in the zoo
+	 * return la liste des visiteurs
 	 */
 	public ArrayList<Visitor> addVisitor(ArrayList<Visitor> visitors) {
 		double weight = 50;
@@ -63,12 +60,16 @@ public class Zoo {
 	}
 	
 	
+	/**
+	 * recupère la méthode getEatToAnimal de la classe Manager
+	 */
 	public void giveEat() {
-		
 		Manager.getInstance().getEatToAnimal();
 	}
 	
-	
+	/**
+	 * récupère la méthode qui affiche les animaux de la classe Manager
+	 */
 	public void display() {
 		for (String string: Manager.getInstance().displayAnimals()) {
 			System.out.println(string);
