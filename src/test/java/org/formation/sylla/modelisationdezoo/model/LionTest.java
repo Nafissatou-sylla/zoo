@@ -1,10 +1,6 @@
 package org.formation.sylla.modelisationdezoo.model;
 
 import static org.junit.jupiter.api.Assertions.*;
-
-import org.formation.sylla.modelisationdezoo.model.Gazelle;
-import org.formation.sylla.modelisationdezoo.model.Lion;
-import org.formation.sylla.modelisationdezoo.model.Visitor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -36,10 +32,8 @@ class LionTest{
 	
 	@Test
 	void testSetAge() {
-		int age = 5;
-		lion.setAge(age);
-		int value = lion.getAge();
-		assertEquals(age, value);
+		lion.setAge(5);
+		assertEquals(lion.getAge(),5);
 	}
 	
 	@Test

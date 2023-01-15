@@ -1,12 +1,16 @@
 package org.formation.sylla.modelisationdezoo.model;
 
+/**
+ * classe Lion qui extends la classe Abstract Animal, et implements aussi l'interface mangeable
+ */
+
 public class Lion extends Animal implements Mangeable{
 	
 	/**
-	 * 
-	 * @param name LionTest name's in super class
-	 * @param age lion's age in super class
-	 * @param weight lion's weight in super class
+	 * le constructeur
+	 * @param name le nom du lion
+	 * @param age son âge
+	 * @param weight son poids
 	 */
 	public Lion(String name, int age, double weight) {
 		super(name, age, weight);
@@ -40,16 +44,18 @@ public class Lion extends Animal implements Mangeable{
 	
 	
 	/**
-	 * 
+	 * quand le lion cri, il rugit
 	 * @return lion cry's type
 	 */
 	public String cry() { return "rugir" ; }
 
+	
 	/**
 	 * when the lion eats the gazelle he grows
 	 * @param gazelle the gazelle to eat
 	 */
-	public double devorer(Gazelle gazelle) {
+	@Override
+	public double devour(Gazelle gazelle) {
 		this.grow(gazelle.getWeight() / 3);
 		return this.getWeight();
 	}
@@ -59,7 +65,8 @@ public class Lion extends Animal implements Mangeable{
 	 * when the lion eats the visitor he grows
 	 * @param visitor the visitor to eat
 	 */
-	public double devorer(Visitor visitor) {
+	@Override
+	public double devour(Visitor visitor) {
 		this.grow(visitor.getWeight() / 3);
 		return this.getWeight();
 	}
