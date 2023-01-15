@@ -7,7 +7,6 @@ public class Main {
 		zoo.display();
 		zoo.giveEat();
 		System.out.println("aprés avoir manger: ");
-		zoo.display();
-		
+		zoo.display();	
 	}
 }
