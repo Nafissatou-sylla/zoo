@@ -30,7 +30,8 @@ public class Manager {
 	 * un tableau de cage
 	 */
 	private Cage cages[];
-	
+
+
 	/**
 	 * le constructeur
 	 */
@@ -66,6 +67,25 @@ public class Manager {
 	public static Manager getInstance() {
 		return instance;
 	}
+	
+	
+	/**
+	 * return la liste des cages du zoo
+	 * @return the cages
+	 */
+	public Cage[] getCages() {
+		return cages;
+	}
+
+
+	/**
+	 * change la liste des cages avec la liste passée en arguments
+	 * @param cages the cages to set
+	 */
+	public void setCages(Cage[] cages) {
+		this.cages = cages;
+	}
+	
 	
 	/**
 	 * 
