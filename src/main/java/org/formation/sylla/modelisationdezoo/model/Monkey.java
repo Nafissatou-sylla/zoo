@@ -1,9 +1,14 @@
 package org.formation.sylla.modelisationdezoo.model;
 
+/**
+ * la classe Singe qui extends la classe Animal
+ * @author SYLLA Nafissatou
+ *
+ */
 public class Monkey extends Animal{
 
 	/**
-	 * 
+	 * le constructeur
 	 * @param name monkey's name
 	 * @param age monkey's age
 	 * @param weight monkeys weight
@@ -31,7 +36,7 @@ public class Monkey extends Animal{
 	public void jump() { this.losingWeight(0.07); }
 	
 	/**
-	 * 
+	 * la methode du cri du singe
 	 * @return monkey's cry's type
 	 */
 	public String cry() {return "Babouiner"; }
