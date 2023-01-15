@@ -26,6 +26,4 @@ public class Visitor {
 	 * @return visitor's weight
 	 */
 	public double getWeight() { return weight;}
-
-	
 }
