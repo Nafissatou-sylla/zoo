@@ -19,10 +19,12 @@ import org.formation.sylla.modelisationdezoo.model.technique.CageOccupyException
  */
 
 public class Manager {
+	
 	/**
 	 * l'instance de la classe 
 	 */
 	private static Manager instance = new Manager();
+	
 	
 	/**
 	 * un tableau de cage
