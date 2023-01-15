@@ -2,12 +2,11 @@
 
 package "vue" {
 	class Zoo {
-		-animal: Animal
-		-cages: ArrayList<Case> 
 		-visiteurs: list<Visiteur>
+		_nombreMaxVisiteurs: int
 		
 		+ajouterUnVisiteur(visiteurs: ArrayList<Visiteur>): ArrayList<Visiteur>
-		+afficherAnimals()
+		+afficherLesAnimaux()
 		+donnerAManger()
 		+faireSortirUnVisiteur(visiteurs: List<Visiteurs>): Visiteur
 	}
@@ -22,9 +21,12 @@ package "controleur" {
 		-{static} instance: Manager
 		-cages: Cage[]
 		
+		+{static} getInstance(): Manager
 		-init()
 		+displayAnimals(): List<String>
 		+getEatToAnimal()
+		+getCages(): Cage[]
+		+setCages(cages: Cage[])
 	}
 }
 
