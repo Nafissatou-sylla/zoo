@@ -96,7 +96,7 @@ class LionTest{
 	@Test
 	void testDevourVisitor() {
 		Visitor visitor = new Visitor(6) ;
-		lion.devour(visitor );
+		lion.devour(visitor);
 		double newWeight = lion.getWeight();
 		assertEquals(newWeight, initWeight + (visitor.getWeight() / 3) );
 	}

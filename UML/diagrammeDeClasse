@@ -89,7 +89,7 @@ package "model" {
 
 
 
-Zoo ...> Manager
+Zoo ....> Manager
 Manager o--- "0--n  cages" Cage
 Main *--"1 zoo"  Zoo
 Zoo -" 0--10  visiteurs "  Visiteur

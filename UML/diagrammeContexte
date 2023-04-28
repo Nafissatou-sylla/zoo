@@ -1,0 +1,9 @@
+@startuml
+object Zoo <<actor>>
+object Animal
+ 
+ 
+ Zoo - Animal:inscription, jouer un tour >
+ Zoo - Animal:acceptation, résultat <
+ 
+@enduml 
